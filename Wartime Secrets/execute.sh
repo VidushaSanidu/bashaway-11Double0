@@ -18,6 +18,10 @@ checkStrength(){
         return false
     fi
 
+    if ! [[ "$password" =~ [!@#$%^&*(),.?\":{}|<>] ]]; then
+        return false
+    fi
+
     return true
 }
 
